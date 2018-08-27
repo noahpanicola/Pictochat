@@ -1,0 +1,28 @@
+.toggle-btn img {
+  width: 100%;
+  z-index: 1;
+  background: transparent;
+  -webkit-transition: width 200ms;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+.toggle-btn img:hover {
+  cursor: pointer;
+  width: 105%;
+  -webkit-transition: width 100ms; /* Safari */
+  transition: width 100ms;
+}
+
+.toggle-btn {
+  width: 50px;
+  display: block;
+  padding: 5px;
+}
+
+.navigator-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
