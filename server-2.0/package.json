@@ -2,15 +2,17 @@
   "name": "server-2.0",
   "version": "1.0.0",
   "description": "A server for the tutoring application.",
-  "main": "server.js",
+  "main": "Main.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --experimental-modules Main.mjs"
   },
   "author": "Noah Panicola",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
     "pg": "^7.4.3",
+    "simple-node-logger": "^0.93.37",
     "socket.io": "^2.1.1"
   }
 }

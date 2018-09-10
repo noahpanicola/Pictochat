@@ -3,7 +3,7 @@ import AppStore from '../flux/AppStore.js'
 import Socket from '../io/SocketClient.js'
 import '../styles/App.css'
 
-export default class Whiteboard extends Component {
+class Whiteboard extends Component {
 
   constructor(props) {
     super(props)
@@ -86,6 +86,7 @@ export default class Whiteboard extends Component {
   updateWindowDimensions() {
     var context = this.canvas.current.getContext('2d')
     const imageData = context.getImageData(0, 0, window.innerWidth, window.innerHeight)
+    console.log(imageData)
 
     this.setState({
       width: window.innerWidth,
@@ -109,7 +110,7 @@ export default class Whiteboard extends Component {
       drawLine(pixels[i], pixels[i+1], context)
     }
 
-    async function drawLine(start, end, ctx){
+    async function drawLine(start, end, ctx) {
       if(end == null || start == null) return
       ctx.beginPath();
       ctx.moveTo(start[0], start[1]);
@@ -138,3 +139,5 @@ export default class Whiteboard extends Component {
     )
   }
 }
+
+export default Whiteboard
